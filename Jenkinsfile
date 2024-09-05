@@ -21,7 +21,6 @@ pipeline {
             }
         }
         stage('Test') {
-            sh 'echo Test stage'
             agent {
                 docker {
                     image 'node:18-alpine'
@@ -30,6 +29,7 @@ pipeline {
             }
             steps {
                 sh '''
+                    echo Test stage
                     ls -la
                 '''
             }
