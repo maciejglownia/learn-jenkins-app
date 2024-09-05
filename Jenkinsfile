@@ -30,7 +30,7 @@ pipeline {
             steps {
                 sh '''
                     echo Test stage
-                    test -f bulid/"index.html"
+                    test -f workspaces/learn-jenkins-app/build/index.html
                     ls -la
                 '''
             }
