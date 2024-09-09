@@ -9,17 +9,17 @@ pipeline {
 
     stages {
 
-        stage('AWS') {
-            agent {
-                docker {
-                    image 'amazon/aws-cli'
-                    args "--entrypoint=''"
-                }
-            }
-            steps '''
-                aws --version
-            '''
-        }
+        // stage('AWS') {
+        //     agent {
+        //         docker {
+        //             image 'amazon/aws-cli'
+        //             args "--entrypoint=''"
+        //         }
+        //     }
+        //     steps '''
+        //         aws --version
+        //     '''
+        // }
 
         stage('Build') {
             agent {
